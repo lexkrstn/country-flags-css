@@ -10,7 +10,6 @@ const countries = JSON.parse(fs.readFileSync(path.join(
 	__dirname, 'node_modules', 'world-countries', 'dist', 'countries.json'
 )));
 
-const allCss = [];
 for (let style of styles) {
 	const styleCss = [];
 	for (let size of sizes) {
@@ -24,10 +23,7 @@ for (let style of styles) {
 	const filePath = path.join(dstPath, style + '.css');
 	const data = styleCss.join('\n');
 	fs.writeFileSync(filePath, data, 'utf8');
-	allCss.push(data);
 }
-console.log('Generating all-in-one css file...')
-fs.writeFileSync(path.join(dstPath, 'all.css'), allCss.join('\n'), 'utf8');
 
 function generateSubsetCss(style, size, resolved) {
 	const css = [

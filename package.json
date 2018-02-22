@@ -2,9 +2,8 @@
   "name": "country-flags-css",
   "version": "1.0.1",
   "description": "Stylesheets with individual countries' flags and their spritesheets.",
-  "main": "dist/all.css",
+  "main": "dist/flat.css",
   "scripts": {
-    "postinstall": "npm run build",
     "build": "node build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
