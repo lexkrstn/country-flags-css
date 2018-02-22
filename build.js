@@ -35,7 +35,7 @@ function generateSubsetCss(style, size, resolved) {
 	for (let chunks of resolved) {
 		const cca2 = chunks[0];
 		const ext = chunks[1];
-		const url = 'flags/' + style + size + '/' + cca2 + '.' + ext;
+		const url = style + size + '/' + cca2 + '.' + ext;
 		css.push(
 			'.cf-' + size + '.cf-' + cca2 + ':before{background-image:url(' +
 			url + ')}'
