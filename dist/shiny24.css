@@ -1,5 +1,5 @@
-.cf-24{display:inline-block;vertical-align:middle;background: no-repeat 50% 50%;background-size:contain}
-.cf-24:before{content:"";display:block;width:24px;height:24px}
+.cf-24{display:inline-block;vertical-align:middle}
+.cf-24:before{content:"";display:block;background:no-repeat 50% 50%;background-size:contain;width:24px;height:24px}
 .cf-24.cf-af:before{background-image:url(shiny24/af.png)}
 .cf-24.cf-al:before{background-image:url(shiny24/al.png)}
 .cf-24.cf-dz:before{background-image:url(shiny24/dz.png)}

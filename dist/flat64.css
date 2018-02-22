@@ -1,5 +1,5 @@
-.cf-64{display:inline-block;vertical-align:middle;background: no-repeat 50% 50%;background-size:contain}
-.cf-64:before{content:"";display:block;width:64px;height:64px}
+.cf-64{display:inline-block;vertical-align:middle}
+.cf-64:before{content:"";display:block;background:no-repeat 50% 50%;background-size:contain;width:64px;height:64px}
 .cf-64.cf-af:before{background-image:url(flat64/af.png)}
 .cf-64.cf-al:before{background-image:url(flat64/al.png)}
 .cf-64.cf-dz:before{background-image:url(flat64/dz.png)}

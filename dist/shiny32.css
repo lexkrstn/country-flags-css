@@ -1,5 +1,5 @@
-.cf-32{display:inline-block;vertical-align:middle;background: no-repeat 50% 50%;background-size:contain}
-.cf-32:before{content:"";display:block;width:32px;height:32px}
+.cf-32{display:inline-block;vertical-align:middle}
+.cf-32:before{content:"";display:block;background:no-repeat 50% 50%;background-size:contain;width:32px;height:32px}
 .cf-32.cf-af:before{background-image:url(shiny32/af.png)}
 .cf-32.cf-al:before{background-image:url(shiny32/al.png)}
 .cf-32.cf-dz:before{background-image:url(shiny32/dz.png)}

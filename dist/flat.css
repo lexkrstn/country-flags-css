@@ -1,5 +1,5 @@
-.cf-16{display:inline-block;vertical-align:middle;background: no-repeat 50% 50%;background-size:contain}
-.cf-16:before{content:"";display:block;width:16px;height:16px}
+.cf-16{display:inline-block;vertical-align:middle}
+.cf-16:before{content:"";display:block;background:no-repeat 50% 50%;background-size:contain;width:16px;height:16px}
 .cf-16.cf-af:before{background-image:url(flat16/af.png)}
 .cf-16.cf-al:before{background-image:url(flat16/al.png)}
 .cf-16.cf-dz:before{background-image:url(flat16/dz.png)}
@@ -227,8 +227,8 @@
 .cf-16.cf-ye:before{background-image:url(flat16/ye.png)}
 .cf-16.cf-zm:before{background-image:url(flat16/zm.png)}
 .cf-16.cf-zw:before{background-image:url(flat16/zw.png)}
-.cf-24{display:inline-block;vertical-align:middle;background: no-repeat 50% 50%;background-size:contain}
-.cf-24:before{content:"";display:block;width:24px;height:24px}
+.cf-24{display:inline-block;vertical-align:middle}
+.cf-24:before{content:"";display:block;background:no-repeat 50% 50%;background-size:contain;width:24px;height:24px}
 .cf-24.cf-af:before{background-image:url(flat24/af.png)}
 .cf-24.cf-al:before{background-image:url(flat24/al.png)}
 .cf-24.cf-dz:before{background-image:url(flat24/dz.png)}
@@ -456,8 +456,8 @@
 .cf-24.cf-ye:before{background-image:url(flat24/ye.png)}
 .cf-24.cf-zm:before{background-image:url(flat24/zm.png)}
 .cf-24.cf-zw:before{background-image:url(flat24/zw.png)}
-.cf-32{display:inline-block;vertical-align:middle;background: no-repeat 50% 50%;background-size:contain}
-.cf-32:before{content:"";display:block;width:32px;height:32px}
+.cf-32{display:inline-block;vertical-align:middle}
+.cf-32:before{content:"";display:block;background:no-repeat 50% 50%;background-size:contain;width:32px;height:32px}
 .cf-32.cf-af:before{background-image:url(flat32/af.png)}
 .cf-32.cf-al:before{background-image:url(flat32/al.png)}
 .cf-32.cf-dz:before{background-image:url(flat32/dz.png)}
@@ -685,8 +685,8 @@
 .cf-32.cf-ye:before{background-image:url(flat32/ye.png)}
 .cf-32.cf-zm:before{background-image:url(flat32/zm.png)}
 .cf-32.cf-zw:before{background-image:url(flat32/zw.png)}
-.cf-48{display:inline-block;vertical-align:middle;background: no-repeat 50% 50%;background-size:contain}
-.cf-48:before{content:"";display:block;width:48px;height:48px}
+.cf-48{display:inline-block;vertical-align:middle}
+.cf-48:before{content:"";display:block;background:no-repeat 50% 50%;background-size:contain;width:48px;height:48px}
 .cf-48.cf-af:before{background-image:url(flat48/af.png)}
 .cf-48.cf-al:before{background-image:url(flat48/al.png)}
 .cf-48.cf-dz:before{background-image:url(flat48/dz.png)}
@@ -914,8 +914,8 @@
 .cf-48.cf-ye:before{background-image:url(flat48/ye.png)}
 .cf-48.cf-zm:before{background-image:url(flat48/zm.png)}
 .cf-48.cf-zw:before{background-image:url(flat48/zw.png)}
-.cf-64{display:inline-block;vertical-align:middle;background: no-repeat 50% 50%;background-size:contain}
-.cf-64:before{content:"";display:block;width:64px;height:64px}
+.cf-64{display:inline-block;vertical-align:middle}
+.cf-64:before{content:"";display:block;background:no-repeat 50% 50%;background-size:contain;width:64px;height:64px}
 .cf-64.cf-af:before{background-image:url(flat64/af.png)}
 .cf-64.cf-al:before{background-image:url(flat64/al.png)}
 .cf-64.cf-dz:before{background-image:url(flat64/dz.png)}

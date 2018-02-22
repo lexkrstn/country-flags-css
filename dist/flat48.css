@@ -1,5 +1,5 @@
-.cf-48{display:inline-block;vertical-align:middle;background: no-repeat 50% 50%;background-size:contain}
-.cf-48:before{content:"";display:block;width:48px;height:48px}
+.cf-48{display:inline-block;vertical-align:middle}
+.cf-48:before{content:"";display:block;background:no-repeat 50% 50%;background-size:contain;width:48px;height:48px}
 .cf-48.cf-af:before{background-image:url(flat48/af.png)}
 .cf-48.cf-al:before{background-image:url(flat48/al.png)}
 .cf-48.cf-dz:before{background-image:url(flat48/dz.png)}

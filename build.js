@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const fx = require('mkdir-recursive');
+const Spritesmith = require('spritesmith');
 
 const srcPath = path.join(__dirname, 'src');
 const dstPath = path.join(__dirname, 'dist');
@@ -15,9 +16,11 @@ for (let style of styles) {
 	for (let size of sizes) {
 		console.log('Copying ' + size + 'px ' + style + ' flags...');
 		const stats = copySubsetImages(style, size);
-		console.log('Generating ' + size + 'px ' + style + ' css...')
+		console.log('Generating ' + size + 'px ' + style + ' css...');
 		const css = generateSubsetCss(style, size, stats.resolved);
 		styleCss.push(css);
+		console.log('Generating ' + size + 'px ' + style + ' spritesheet...');
+		generateSpriteSheet(style, size);
 	}
 	console.log('Generating ' + style + ' css...');
 	const filePath = path.join(dstPath, style + '.css');
@@ -25,12 +28,56 @@ for (let style of styles) {
 	fs.writeFileSync(filePath, data, 'utf8');
 }
 
+function generateSpriteSheet(style, size) {
+	// Make it sync
+	const iter = (function*() {
+		yield _generateSpriteSheet(style, size, () => iter.next());
+	})();
+	iter.next();
+}
+
+function _generateSpriteSheet(style, size, cb) {
+	const basePath = getSubsetDstPath(style, size);
+	const sprites = fs.readdirSync(basePath).map(name => path.join(basePath, name));
+	const dstImageName = style + size + 'sheet.png';
+	const dstImagePath = path.join(dstPath, dstImageName);
+	const dstCssPath = path.join(dstPath, style + size + 'sheet.css');
+	// Generate PNG
+	Spritesmith.run({src: sprites}, function(err, result) {
+		if (err) {
+			console.error(err);
+			return;
+		}
+		fs.writeFileSync(dstImagePath, result.image);
+		// Generate stylesheet
+		const css = [
+			'.cf-' + size + '{display:inline-block;vertical-align:middle}',
+			'.cf-' + size + ':before{content:"";display:block;' +
+				'background:url(' + dstImageName + ') no-repeat;' + 
+				'background-size:contain;width:' + size + 'px;height:' +
+				size + 'px;}'
+		];
+		for (let filePath of Object.keys(result.coordinates)) {
+			const chunks = filePath.split(/\\|\//);
+			const fileName = chunks[chunks.length - 1];
+			const cca2 = fileName.split('.')[0];
+			const coords = result.coordinates[filePath];
+			css.push(
+				'.cf-' + size + '.cf-' + cca2 + ':before{background-position:' +
+				(-coords.x) + 'px ' + (-coords.y) + 'px}'
+			);
+		}
+		fs.writeFileSync(dstCssPath, css.join('\n'), 'utf8');
+		cb();
+	});
+}
+
 function generateSubsetCss(style, size, resolved) {
 	const css = [
-		'.cf-' + size + '{display:inline-block;vertical-align:middle;' +
-			'background: no-repeat 50% 50%;background-size:contain}',
-		'.cf-' + size + ':before{content:"";display:block;width:' + size +
-			'px;height:' + size + 'px}'
+		'.cf-' + size + '{display:inline-block;vertical-align:middle}',
+		'.cf-' + size + ':before{content:"";display:block;' +
+			'background:no-repeat 50% 50%;background-size:contain;width:' +
+			size + 'px;height:' + size + 'px}'
 	];
 	for (let chunks of resolved) {
 		const cca2 = chunks[0];

@@ -27,6 +27,7 @@
   "homepage": "https://github.com/lexkrstn/country-flags-css#readme",
   "devDependencies": {
     "mkdir-recursive": "^0.4.0",
+    "spritesmith": "^3.3.0",
     "world-countries": "^2.0.0"
   }
 }
