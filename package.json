@@ -1,0 +1,33 @@
+{
+  "name": "country-flags-css",
+  "version": "1.0.0",
+  "description": "CSS/SCSS for individual country flags icons and sprite sheet for applications.",
+  "main": "dist/country-flags-flat-16.css",
+  "scripts": {
+    "postinstall": "build",
+    "build": "node build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lexkrstn/country-flags-css.git"
+  },
+  "keywords": [
+    "country",
+    "flags",
+    "scss",
+    "sass",
+    "css",
+    "sprite"
+  ],
+  "author": "Alexander Korostin <lexkrstn@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lexkrstn/country-flags-css/issues"
+  },
+  "homepage": "https://github.com/lexkrstn/country-flags-css#readme",
+  "devDependencies": {
+    "mkdir-recursive": "^0.4.0",
+    "world-countries": "^2.0.0"
+  }
+}
