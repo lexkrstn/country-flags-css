@@ -1,8 +1,8 @@
 {
   "name": "country-flags-css",
   "version": "1.0.0",
-  "description": "CSS/SCSS for individual country flags icons and sprite sheet for applications.",
-  "main": "dist/country-flags-flat-16.css",
+  "description": "Stylesheets with individual countries' flags and their spritesheets.",
+  "main": "dist/all.css",
   "scripts": {
     "postinstall": "build",
     "build": "node build.js",
