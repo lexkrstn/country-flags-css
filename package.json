@@ -1,6 +1,6 @@
 {
   "name": "country-flags-css",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Stylesheets with individual countries' flags and their spritesheets.",
   "main": "dist/flat.css",
   "scripts": {
