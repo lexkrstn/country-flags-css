@@ -84,6 +84,8 @@ Then you just import `country-flags-css/dist/<CSS FILE YOU NEED>` from your
 - `flat.css` - css classes for icons of all sizes only flatly looking flags.
 - `shiny.css` - css classes for icons of all sizes only 3d looking flags.
 - `(flat|shiny)(16|24|32|48|64).css` (e.g. `flat16.css`) - 16x16px flat flags.
+- `(flat|shiny)(16|24|32|48|64)sheet.css` (e.g. `flat16sheet.css`) - 16x16px
+  flat flags from spritesheet.
 
 ## CSS classes
 
