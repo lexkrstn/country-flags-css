@@ -1,5 +1,5 @@
 .cf-16{display:inline-block;vertical-align:middle}
-.cf-16:before{content:"";display:block;background:url(flat16sheet.png) no-repeat;background-size:contain;width:16px;height:16px;}
+.cf-16:before{content:"";display:block;background:url(flat16sheet.png) no-repeat;width:16px;height:16px;}
 .cf-16.cf-ad:before{background-position:-16px 0px}
 .cf-16.cf-ae:before{background-position:-48px -160px}
 .cf-16.cf-af:before{background-position:0px -16px}

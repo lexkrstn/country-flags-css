@@ -54,7 +54,7 @@ function _generateSpriteSheet(style, size, cb) {
 			'.cf-' + size + '{display:inline-block;vertical-align:middle}',
 			'.cf-' + size + ':before{content:"";display:block;' +
 				'background:url(' + dstImageName + ') no-repeat;' + 
-				'background-size:contain;width:' + size + 'px;height:' +
+				'width:' + size + 'px;height:' +
 				size + 'px;}'
 		];
 		for (let filePath of Object.keys(result.coordinates)) {

@@ -1,5 +1,5 @@
 .cf-24{display:inline-block;vertical-align:middle}
-.cf-24:before{content:"";display:block;background:url(flat24sheet.png) no-repeat;background-size:contain;width:24px;height:24px;}
+.cf-24:before{content:"";display:block;background:url(flat24sheet.png) no-repeat;width:24px;height:24px;}
 .cf-24.cf-ad:before{background-position:-24px 0px}
 .cf-24.cf-ae:before{background-position:-72px -240px}
 .cf-24.cf-af:before{background-position:0px -24px}
